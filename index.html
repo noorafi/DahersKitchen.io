@@ -1,48 +1,85 @@
+<!--font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Slabo 27px', serif; -->
+<!-- <css>
+  <style>
+    body{
+       background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/04/48/50/00585a3568a0a7d.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
 
-<header>
+    h1{
+      text-align: center;
+      font-size: 50px;
+      font-family: 'Raleway', sans-serif;
+      color: darkred;
+    }
 
-  </header>
-
-<body>
-
-   </body>
-
-<h1>
-  Noor Afifi
-</h1>
-<p>
- Hey this is my frist website, this will improve as you go along. stay in tuned. 
-</p>
-<style>
-  h1{
-    font:2rem;
-    color:red;
-    text-align:center;
-
+    p{
+      text-align: left;
+      font-size: 25px;
+      font-family:'Slabo 27px', serif;
+    }
+    .card {
+  position: relative;
+  width: 9rem; height: 12rem;
+  perspective: 30rem;
+}
+  .front, .back {
+  position: absolute;
+  width: 100%; height: 100%;
+  transition: transform 1s;
+  backface-visibility:hidden;
   }
+.front {
+  background-color: #66ccff;
+}
+.back {
+  background-color: #dd8800;
+  transform: rotateY(180deg);
+}
+.card:hover .front{ transform: rotateY(180deg); }
+.card:hover .back { transform: rotateY(360deg); }
 
-  p{
-    font:2rem;
-    color:blue;
-    text-align: center;
-  }
-  body{
-    color:lightgray;
-  }
+  </style>
+</css> -->
 
-  header{
-    color:grey;
-  }
-
-</style>
-<a href="https://github.com/noorafi/noorafi.github.io">
+<html>
+  <head>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Open+Sans|Raleway|Slabo+27px" rel="stylesheet">
+<link href="./index.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="card">
+    <div class="front">
+      <span>
+      front of the car
+      </span>
+    </div>
+    <div class="back">
+      <span>
+      back of card
+      </span>
+    </div>
+    </div>
+  <div>
+     <h1>
+       noor afifis website
+     </h1>
+   </div>
+    <a href="https://github.com/noorafi" target="_blank">
   repo
 </a>
 |
-<a href="https://www.freecodecamp.org/portfolio/noorafi">
+<a href="https://www.freecodecamp.org/portfolio/noorafi" target="_blank">
    freecodecamp
 </a>
 |
-<a href="https://www.codewars.com/users/noorafi">
+<a href="https://www.codewars.com/users/noorafi" target="_blank">
   codewars
 </a>
+  </body>
+</html>
