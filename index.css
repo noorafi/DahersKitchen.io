@@ -1,46 +1,118 @@
 body {
-   background-image: url('https://png.pngtree.com/thumb_back/fw800/back_pic/04/48/50/00585a3568a0a7d.jpg');
-background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+  /*
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/48/50/00585a3568a0a7d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+
+/*  background twinkling stars */
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  background: #000 url("images/stars1.png") repeat top center;
+  z-index: -2;
+}
+
+.twinkling {
+  background: transparent url("images/twinkling1.png") repeat top center;
+  z-index: -1;
+
+  -moz-animation: move-twink-back 200s linear infinite;
+  -ms-animation: move-twink-back 200s linear infinite;
+  -o-animation: move-twink-back 200s linear infinite;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
 }
 
 h1 {
   text-align: center;
-  font-size: 50%;
-  font-family: 'Raleway', sans-serif;
-  color: darkred;
+  font-size: 250%;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
 }
 
 p {
   text-align: center;
   font-size: 25px;
-  font-family:'Slabo 27px', serif;
+  font-family: "Slabo 27px", serif;
 }
 
-span {
-text-align: center;
-}
+/* card style */
 
 .card {
-position: relative;
-width: 9rem; height: 12rem;
-perspective: 30rem;
+  position: relative;
+  width: 9rem;
+  height: 12rem;
+  perspective: 30rem;
 }
-.front, .back {
-position: absolute;
-width: 100%; height: 100%;
-transition: transform 1s;
-backface-visibility:hidden;
+.card .parent .front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  backface-visibility: hidden;
 }
 .front {
-text-align : center;
-background-color: #66ccff;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  background-color: #66ccff;
 }
 .back {
-background-color: #dd8800;
-transform: rotateY(180deg);
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  background-color: #dd8800;
+  transform: rotateY(180deg);
 }
 
-.card:hover .front{ transform: rotateY(180deg); }
-.card:hover .back { transform: rotateY(360deg); }
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card:hover .back {
+  transform: rotateY(360deg);
+}
